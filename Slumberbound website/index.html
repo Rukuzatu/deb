@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slumberbound studio</title>
+  <!-- font awesome link -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+  <!-- css link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="images/SLUMBERBOUND__1_-removebg-preview.png" class="card-img slowfloat">
+      <div class="card-body">
+        <h5>Slumberbound</h5>
+        <p>Slumberbound Studio is an indie game developing team that specializes in creating unique and immersive gaming experiences. With a focus on storytelling and engaging gameplay mechanics, the team is dedicated to creating games that transport players to other worlds and challenge their skills and creativity.</p>
+      </div>
+      <button id="show-more-button">
+        <span>Show more</span>
+      </button>
+      <div id="hidden-text" class="hidden-text">
+        <p>Slumberbound Studio is an indie game development studio dedicated to crafting engaging and immersive gaming experiences. Our team is passionate about bringing unique ideas to life and creating memorable gameplay moments. We believe in fostering a collaborative and supportive work environment where everyone can contribute their talents and ideas. Join us on our journey to create the next generation of unforgettable games!</p>
+      </div>
+            
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          $('#show-more-button').click(function() {
+            $('#hidden-text').toggle();
+            $(this).find('span').text(function(_, text) {
+              return text === 'Show more' ? 'Show less' : 'Show more';
+            });
+          });
+        });
+      </script>          
+<script src="script.js"></script>
+</body>
+</html>
